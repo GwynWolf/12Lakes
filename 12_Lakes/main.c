@@ -65,49 +65,49 @@ void print_menu()
     if(enter_menu == 1)
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((15 << 4) | 0));
-        printf("Ïðîñìîòðåòü èíôîðìàöèþ ïðî îçåðà\n");
+        printf("ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿Ñ€Ð¾ Ð¾Ð·ÐµÑ€Ð°\n");
     }
     else
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((0 << 4) | 2));
-        printf("Ïðîñìîòðåòü èíôîðìàöèþ ïðî îçåðà\n");
+        printf("ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿Ñ€Ð¾ Ð¾Ð·ÐµÑ€Ð°\n");
     }
 
     if(enter_menu == 2)
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((15 << 4) | 0));
-        printf("Äîáàâèòü èíôîðìàöèþ ïðî îçåðî\n");
+        printf("Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿Ñ€Ð¾ Ð¾Ð·ÐµÑ€Ð¾\n");
     }
     else
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((0 << 4) | 2));
-        printf("Äîáàâèòü èíôîðìàöèþ ïðî îçåðî\n");
+        printf("Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿Ñ€Ð¾ Ð¾Ð·ÐµÑ€Ð¾\n");
     }
 
     if(enter_menu == 3)
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((15 << 4) | 0));
-        printf("Ïîèñê îçåð ñ ãëóáèíîé ìåíüøå 50ì è ñîëåíîñòüþ áîëüøå 20 ïðîöåíòîâ\n");
+        printf("ÐŸÐ¾Ð¸ÑÐº Ð¾Ð·ÐµÑ€ Ñ Ð³Ð»ÑƒÐ±Ð¸Ð½Ð¾Ð¹ Ð¼ÐµÐ½ÑŒÑˆÐµ 50Ð¼ Ð¸ ÑÐ¾Ð»ÐµÐ½Ð¾ÑÑ‚ÑŒÑŽ Ð±Ð¾Ð»ÑŒÑˆÐµ 20 Ð¿Ñ€Ð¾Ñ†ÐµÐ½Ñ‚Ð¾Ð²\n");
     }
     else
     {
         SetConsoleTextAttribute(hConsole, (WORD) ((0 << 4) | 2));
-        printf("Ïîèñê îçåð ñ ãëóáèíîé ìåíüøå 50ì è ñîëåíîñòüþ áîëüøå 20 ïðîöåíòîâ\n");
+        printf("ÐŸÐ¾Ð¸ÑÐº Ð¾Ð·ÐµÑ€ Ñ Ð³Ð»ÑƒÐ±Ð¸Ð½Ð¾Ð¹ Ð¼ÐµÐ½ÑŒÑˆÐµ 50Ð¼ Ð¸ ÑÐ¾Ð»ÐµÐ½Ð¾ÑÑ‚ÑŒÑŽ Ð±Ð¾Ð»ÑŒÑˆÐµ 20 Ð¿Ñ€Ð¾Ñ†ÐµÐ½Ñ‚Ð¾Ð²\n");
     }
     SetConsoleTextAttribute(hConsole, (WORD) ((0 << 4) | 2));
-    printf("Äëÿ âûõîäà íàæìèòå ESC");
+    printf("Ð”Ð»Ñ Ð²Ñ‹Ñ…Ð¾Ð´Ð° Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ ESC");
 }
 
 void node_print()
 {
     system("cls");
     system("color 02");
-    printf("Ïðîñìîòð äîñòóïíîé èíôîðìàöèè\n");
+    printf("ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾Ð¹ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸\n");
     printf("\n");
     struct Lake* new_node = Head;
     while(new_node != NULL)
     {
-        printf("Íàçâàíèå:%s\n Ñòðàíà:%s\n Ãëóáèíà:%dì\n Ñîëåíîñòü:%.3lf%% \n", new_node->Name,
+        printf("ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ:%s\n Ð¡Ñ‚Ñ€Ð°Ð½Ð°:%s\n Ð“Ð»ÑƒÐ±Ð¸Ð½Ð°:%dÐ¼\n Ð¡Ð¾Ð»ÐµÐ½Ð¾ÑÑ‚ÑŒ:%.3lf%% \n", new_node->Name,
                new_node->Country, new_node->depth,
                new_node->salinity);
         printf("\n");
@@ -120,7 +120,7 @@ void node_record()
 {
     system("cls");
     system("color 02");
-    printf("Äîáàâèòü çàïèñü\n");
+    printf("Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð·Ð°Ð¿Ð¸ÑÑŒ\n");
     int a = 0;
     struct Lake* new_node;
 
@@ -130,21 +130,21 @@ void node_record()
     else
         new_node->next = NULL;
     Head = new_node;
-    printf("Ââåäèòå íàçâàíèå îçåðà\n");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¾Ð·ÐµÑ€Ð°\n");
     scanf("%s", new_node->Name);
-    printf("Ââåäèòå íàçâàíèå ñòðàíû, ãäå íàõîäèòñÿ äàííîå îçåðî\n");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ñ€Ð°Ð½Ñ‹, Ð³Ð´Ðµ Ð½Ð°Ñ…Ð¾Ð´Ð¸Ñ‚ÑÑ Ð´Ð°Ð½Ð½Ð¾Ðµ Ð¾Ð·ÐµÑ€Ð¾\n");
     scanf("%s", new_node->Country);
     while(a == 0)
     {
         fflush(stdin);
-        printf("Ââåäèòå ãëóáèíó îçåðà â ìåòðàõ\n");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð»ÑƒÐ±Ð¸Ð½Ñƒ Ð¾Ð·ÐµÑ€Ð° Ð² Ð¼ÐµÑ‚Ñ€Ð°Ñ…\n");
         a = scanf("%d", &new_node->depth);
     }
     a = 0;
     while(a == 0)
     {
         fflush(stdin);
-        printf("Ââåäèòå ñîëåíîñòü îçåðà â ïðîöåíòàõ\n");
+        printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¾Ð»ÐµÐ½Ð¾ÑÑ‚ÑŒ Ð¾Ð·ÐµÑ€Ð° Ð² Ð¿Ñ€Ð¾Ñ†ÐµÐ½Ñ‚Ð°Ñ…\n");
         a = scanf("%lf", &new_node->salinity);
     }
     getchar();
@@ -162,7 +162,7 @@ void node_search()
         if(new_node->depth < 50)
             if(new_node->salinity > 20)
             {
-                printf("Íàçâàíèå:%s\n Ñòðàíà:%s\n Ãëóáèíà:%dì\n Ñîëåíîñòü:%.3lf%%\n", new_node->Name,
+                printf("ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ:%s\n Ð¡Ñ‚Ñ€Ð°Ð½Ð°:%s\n Ð“Ð»ÑƒÐ±Ð¸Ð½Ð°:%dÐ¼\n Ð¡Ð¾Ð»ÐµÐ½Ð¾ÑÑ‚ÑŒ:%.3lf%%\n", new_node->Name,
                new_node->Country, new_node->depth,
                new_node->salinity);
                printf("\n");
@@ -244,3 +244,4 @@ int main()
     }while(choise != 27);
     file_close();
 }
+
