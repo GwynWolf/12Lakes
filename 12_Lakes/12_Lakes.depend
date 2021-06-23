@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1623495538 source:d:\work\khai\Программирование\semester 2\12_lakes\main.c
+	<stdio.h>
+	<Windows.h>
+	<locale.h>
+	<conio.h>
+
