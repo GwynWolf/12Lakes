@@ -2,9 +2,9 @@
 #include <Windows.h>
 #include <locale.h>
 #include <conio.h>
-int enter_menu = 1;
-FILE* Data_lakes;
-struct Lake
+int enter_menu = 1; // переменная, которая указывает на положение указателя в меню
+FILE* Data_lakes; // указатель на текстовый файл с информацией про озера
+struct Lake // структура, содержащая в себе информацию про озеро
 {
     char Name[20];
     char Country[20];
@@ -14,14 +14,14 @@ struct Lake
 };
 struct Lake* Head = NULL;
 
-void file_create()
+void file_create() // функция создания текстовой базы данных
 {
     Data_lakes = fopen("Lakes_inf.txt", "w");
     fclose(Data_lakes);
     Data_lakes = fopen("Lakes_inf.txt", "r");
 }
 
-void file_open()
+void file_open() // открытие текстовой базы данных и создание списка
 {
     if(!(Data_lakes = fopen("Lakes_inf.txt", "r")))
     {
@@ -29,7 +29,7 @@ void file_open()
     }
     else
     {
-        while(!feof(Data_lakes))
+        while(!feof(Data_lakes)) // пока не дошли до конца файла, мы считываем строки в структуру
         {
             struct Lake* new_node = (struct Lake*)malloc(sizeof(struct Lake));
             if(Head != NULL)
@@ -42,7 +42,7 @@ void file_open()
     }
     fclose(Data_lakes);
 }
-void file_close()
+void file_close() // считывание списка в текстовую базу данных и очистка выделеной памяти под структуру
 {
     Data_lakes = fopen("Lakes_inf.txt", "w");
     struct Lake* new_node = Head;
@@ -59,7 +59,7 @@ void file_close()
     fclose(Data_lakes);
 }
 
-void print_menu()
+void print_menu() // Вывод меню, которое подсвечивает указаный пункт
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     if(enter_menu == 1)
@@ -98,7 +98,7 @@ void print_menu()
     printf("Для выхода нажмите ESC");
 }
 
-void node_print()
+void node_print() // Вывод списка на экран
 {
     system("cls");
     system("color 02");
@@ -116,7 +116,7 @@ void node_print()
     getchar();
 }
 
-void node_record()
+void node_record() // добавление структуры к списку
 {
     system("cls");
     system("color 02");
@@ -150,7 +150,7 @@ void node_record()
     getchar();
 }
 
-void node_search()
+void node_search() // поиск в списке озера с прараметрами глубина меньше 50m и соленость более 20%
 {
     system("cls");
     system("color 02");
@@ -171,7 +171,7 @@ void node_search()
     }
     getchar();
 }
-void ENTER()
+void ENTER() // Если пользователь нажал ENTER, то запустить выбраную функцию
 {
     switch(enter_menu)
     {
@@ -192,16 +192,16 @@ void ENTER()
             }
     }
 }
-void UP()
+void UP() // если нажата клавиша вверх, то сместить указатель вверх
 {
-    if(enter_menu == 1)
+    if(enter_menu == 1) // если достигли верха, то сбросить указатель на последний пункт
         enter_menu = 3;
     else
         enter_menu--;
 }
-void DOWN()
+void DOWN() // если нажата клавиша вниз, то то сместить указатель вниз
 {
-    if(enter_menu == 3)
+    if(enter_menu == 3)// если достигли низа, то сбросить указатель на верхний пункт
         enter_menu = 1;
     else
         enter_menu++;
